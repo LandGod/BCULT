@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+
+/* Notes:
+
+Content area is 1600px - centered - with 160px of padding on each side:
+    Translates to 10% padding each side.
+
+*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #1f2029;
+  color: #c6c9d4;
+}
+
+.gradient-background {
+  background: linear-gradient(
+    256.62deg,
+    #2fdfd4 0%,
+    #2fcddf 47.86%,
+    #59afff 100%
+  );
+}
+
+.main-content-area {
+  margin: 36px 10% 0 10%;
+}
+
+.upper-left-nav {
+  font-weight: 600;
+  font-size: 1.125em;
+  letter-spacing: -0.045em;
+}
+
+.logo-header {
+  font-weight: 900;
+  font-size: 36px;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.join-button {
+  width: 200px;
+  height: 4.25em;
+  color: #1f2029;
+  border: 1px solid #1f2029;
+  border-radius: 1px;
+}
+
+/* Note, will need to move this on mobile */
+.social-sidebar {
+  color: #c6c9d5;
+  font-size: 0.875em;
+  line-height: 112.9%;
+  text-align: center;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  transform: rotate(90deg);
+}
+
+.crowd-image {
+    width: 80%;
+    height: calc(940px * 1vh);
+}
