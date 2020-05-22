@@ -41,6 +41,7 @@ button {
 
 .main-content-area {
   position: static;
+  max-width: 1600px;
   margin: 36px 10% 0 10%;
 }
 
