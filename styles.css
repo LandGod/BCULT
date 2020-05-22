@@ -132,6 +132,19 @@ button {
 }
 
 .you-here__arrow {
+  position: absolute;
+  left: calc(50% - 25px);
+  top: 40%;
+  width: 75px;
+  height: 75px;
+  background-color: #1F2029;
+  border-radius: 100%;
+}
+
+.you-here__arrow svg {
+  position: absolute;
+  left: 38%;
+  top: 35%;
 }
 
 .you-here__image {
