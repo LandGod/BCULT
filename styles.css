@@ -72,6 +72,7 @@ button {
   line-height: 104%;
   text-transform: uppercase;
   color: white;
+  margin-left: -50%;
 }
 
 .join-button {
@@ -101,7 +102,29 @@ button {
   margin: 0 2em;
 }
 
-.crowd-image {
-  width: 80%;
-  height: calc(940px * 1vh);
+.you-here__container {
+  padding-top: 2em;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.you-here__overlay {
+
+}
+
+.you-here__text {
+
+}
+
+.you-here__arrow {
+  
+}
+
+.you-here__image {
+  position: relative;
+  width: 110%;
+  height: auto;
+  left: -5%;
 }
