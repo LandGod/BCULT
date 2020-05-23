@@ -246,8 +246,10 @@ hr {
   border: 1px solid #c6c9d4;
 }
 
+/* Features Section */
+
 .features__flex-container {
-  margin-top: 5em;
+  margin: 5em 0;
   display: flex;
   flex-direction: row;
 }
