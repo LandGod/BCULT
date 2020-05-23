@@ -38,6 +38,15 @@ button {
   align-items: center;
 }
 
+.section-heading {
+  font-weight: bold;
+  font-size: 4.5em;
+  line-height: 104%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: white;
+}
+
 .outer-container {
   position: relative;
   width: 100%;
@@ -212,12 +221,7 @@ button {
 .about-section__heading {
   margin: 0 auto;
   max-width: 956px;
-  font-weight: bold;
-  font-size: 4.5em;
-  line-height: 104%;
   text-align: center;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
 }
 
 .about-section__columns-container {
@@ -295,14 +299,7 @@ hr {
 }
 
 .features__section-title {
-  font-weight: bold;
-  font-size: 72px;
-  line-height: 104%;
-
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-
-  color: white;
+  
 }
 
 .features__box {
@@ -393,12 +390,6 @@ hr {
 .key-benefits__heading {
   margin: 0 auto;
   text-align: center;
-  font-weight: bold;
-  font-size: 4.5em;
-  line-height: 104%;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  color: white;
   margin-bottom: 1em;
 }
 
@@ -447,12 +438,8 @@ hr {
 }
 
 .follow__heading {
-  font-weight: bold;
-  font-size: 4.5em;
-  line-height: 120%;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
   margin-bottom: 0.5em;
+  align-self: flex-start;
 }
 
 .follow__text {
@@ -647,6 +634,48 @@ hr {
 
   .you-here__arrow {
     visibility: hidden;
+  }
+
+
+  /* Features Section */
+  .features__flex-container {
+    padding: 1em;
+  }
+
+  .features__image {
+    transform-origin: center;
+    transform: scale(0.5)
+  }
+
+  .features__heading {
+    font-size: 1.5em;
+  }
+
+  .features__text {
+    margin-left: 0;
+  }
+
+  /* Call to action Box */
+
+  .call-to-action__text {
+    width: 90%;
+  }
+
+  /* Key Benfits */
+
+  .key-benefits__heading {
+    padding-left: 0.2em;
+  }
+
+  .key-benefits__column {
+    padding: 1em;
+  }
+
+  /* Follow */
+
+  .follow__heading {
+    box-sizing: border-box;
+    padding-left: 0.2em;
   }
 
 }
