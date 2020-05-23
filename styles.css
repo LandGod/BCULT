@@ -604,6 +604,10 @@ hr {
 
 @media (max-width: 768px) {
 
+  .section-heading {
+    font-size: 2.5em;
+  }
+
   .social-sidebar {
     position: static;
     transform: none;
@@ -639,12 +643,23 @@ hr {
 
   /* Features Section */
   .features__flex-container {
-    padding: 1em;
+    padding: 0;
+    /* padding-right: 1em; */
+  }
+
+  .features__section-title {
+    margin: 0 0 0 0.65em;
+  }
+
+  .features__box {
+    /* display: block; */
+    padding-right: 0.3em;
   }
 
   .features__image {
     transform-origin: center;
-    transform: scale(0.5)
+    transform: scale(0.5);
+    /* float: left; */
   }
 
   .features__heading {
@@ -652,7 +667,8 @@ hr {
   }
 
   .features__text {
-    margin-left: 0;
+    margin-right: 0.2em;
+    margin-left: -1em;
   }
 
   /* Call to action Box */
@@ -673,9 +689,6 @@ hr {
 
   /* Follow */
 
-  .follow__heading {
-    box-sizing: border-box;
-    padding-left: 0.2em;
-  }
+
 
 }
