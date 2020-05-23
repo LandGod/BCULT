@@ -107,7 +107,7 @@ button {
   font-weight: bold;
   font-size: 14px;
   line-height: 112.9%;
-
+  border: none;
   text-align: center;
   letter-spacing: -0.045em;
   text-transform: uppercase;
