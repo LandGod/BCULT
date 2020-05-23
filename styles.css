@@ -225,3 +225,23 @@ button {
   top: -70px;
   left: 8%;
 }
+
+.about-section__closing-text {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  width: 75%;
+  margin: 1.5em auto 2.5em;
+}
+
+.about-section__closing-text--highlight {
+  color: #2fcddf;
+}
+
+hr {
+  border: 1px solid #C6C9D4;
+}
