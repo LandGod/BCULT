@@ -268,8 +268,13 @@ hr {
 }
 
 .features__box {
+  margin-top: 3em;
   display: flex;
   flex-direction: row;
+}
+
+.features__box:first-of-type {
+  margin-top: 0;
 }
 
 .features__image {
