@@ -474,25 +474,23 @@ hr {
 }
 
 .follow__badge {
+  position: relative;
   margin: 0 1em;
+  width: 100px;
 }
 
-/* Replace svg badges with hover versions on hover */
-#facebook-badge:hover {
-  content:url(./assets/social_icons/facebook-hover.svg);
+.follow__badge__img--hover {
+  visibility: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  
 }
 
-#twitter-badge:hover {
-  content:url(./assets/social_icons/twitter-hover.svg);
+.follow__badge:hover .follow__badge__img--hover {
+  visibility: visible;
 }
 
-#youtube-badge:hover {
-  content:url(./assets/social_icons/youtube-hover.svg);
-}
-
-#instagram-badge:hover {
-  content:url(./assets/social_icons/instagram-hover.svg);
-}
 
 /* Footer */
 
