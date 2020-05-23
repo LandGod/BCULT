@@ -440,6 +440,8 @@ hr {
   flex-direction: column;
   width: 50%;
   color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 .follow__heading {
@@ -467,6 +469,7 @@ hr {
 /* Footer */
 
 .footer {
+  box-sizing: border-box;
   background-color: white;
   width: 100%;
   padding: 5em 3em 2em 3em;
@@ -522,14 +525,21 @@ hr {
 
 /* Media Queries for responsiveness */
 
-@media (max-width: 1346px) {
-  /* Lower arrow to avoid overlaying text on wrap */
+@media (max-width: 1366px) {
+
   .you-here__arrow {
-    bottom: 30%;
+    bottom: 55%;
   }
+
+  .you-here__text {
+    top: 5%;
+  }
+
 }
 
 @media (max-width: 1175px) {
+  
+  /* Header Nav */
   .upper-left-nav {
     flex-direction: row;
     flex-wrap: wrap;
@@ -540,16 +550,36 @@ hr {
     margin: 0;
   }
 
-  .logo-header {
-    position: relative;
-    font-weight: 900;
-    font-size: 2.25em;
-    letter-spacing: -0.025em;
-    line-height: 104%;
-    text-transform: uppercase;
-    color: white;
-    transform-origin: center;
-    transform: translate(-4.1ch);
+  /* Features Section */
+  .features__flex-container {
+    flex-wrap: wrap;
+  }
+
+  .features__column {
+    width: 100%;
+  }
+
+  .features__section-title {
+    margin-bottom: 1em;
+  }
+
+  /* Follow Section */
+  .follow__container {
+    flex-wrap: wrap;
+  }
+
+  .follow__column {
+    width: 100%;
+    justify-content: left;
+    align-items: flex-start;
+  }
+
+  .follow__text {
+    margin-bottom: 1em;
+  }
+
+  .follow__badge:first-of-type {
+    margin-left: 0;
   }
 
 }
