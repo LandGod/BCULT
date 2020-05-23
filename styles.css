@@ -61,6 +61,7 @@ button {
 }
 
 .header-container {
+  position: relative;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -88,15 +89,15 @@ button {
 }
 
 .logo-header {
-  position: relative;
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 2.5ch);
   font-weight: 900;
   font-size: 2.25em;
   letter-spacing: -0.025em;
   line-height: 104%;
   text-transform: uppercase;
   color: white;
-  transform-origin: center;
-  transform: translate(-4.1ch);
 }
 
 .join-button {
@@ -162,7 +163,7 @@ button {
   padding-top: 2em;
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: auto;
   overflow: hidden;
 }
 
@@ -637,7 +638,7 @@ hr {
 
   .logo-header {
     position: relative;
-    transform: none;
+    transform: translate(-0.2ch);
   }
 
   .upper-left-nav__button {
@@ -666,7 +667,8 @@ hr {
   }
 
   .you-here__arrow {
-    visibility: hidden;
+    transform-origin: center;
+    transform: scale(0.75);
   }
 
   /* About Section */
