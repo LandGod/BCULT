@@ -88,7 +88,7 @@ button {
   margin: 0 2vw;
 }
 
-.upper-left-nav__button:hover {
+.upper-left-nav__button:hover, .upper-left-nav__button:focus {
   color: #8a8b98;
   text-decoration: underline;
 }
@@ -132,7 +132,7 @@ button {
   );
 }
 
-.join-button:hover {
+.join-button:hover, .join-button:focus {
   background: linear-gradient(
     256.62deg,
     #59afff 0%,
@@ -153,7 +153,7 @@ button {
   background: white;
 }
 
-.join-button--white:hover {
+.join-button--white:hover, .join-button--white:focus {
   background: #d5d6de;
 }
 
@@ -491,6 +491,14 @@ hr {
   visibility: visible;
 }
 
+.follow__badge:focus .follow__badge__img--hover {
+  visibility: visible;
+}
+
+.follow__badge:focus {
+  outline: none;
+}
+
 
 /* Footer */
 
@@ -532,7 +540,7 @@ hr {
   margin-bottom: 1.5em;
 }
 
-.footer__email:hover {
+.footer__email:hover, .footer__email:focus {
   color: #717280;
   text-decoration: underline;
 }
@@ -542,7 +550,7 @@ hr {
   color: #1f2029;
 }
 
-.upper-left-nav--footer .upper-left-nav__button:hover {
+.upper-left-nav--footer .upper-left-nav__button:hover, .upper-left-nav--footer .upper-left-nav__button:focus {
   color: #717280;
 }
 
@@ -690,6 +698,8 @@ hr {
     padding: calc(0.9em * 0.7) 0;
     font-size: 0.75em;
   }
+
+  .join
 
   .join-button--white svg {
     transform-origin: center;
