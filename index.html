@@ -78,6 +78,7 @@
           </div>
         </div>
         <picture>
+          <!-- The srcset property argument will break if my code format plugin has it's way -->
           <!-- prettier-ignore -->
           <img
           class="you-here__image"
@@ -117,11 +118,36 @@
           </div>
         </div>
         <div class="about-section__image-container">
-          <img
+          <picture>
+            <!-- The srcset property argument will break if my code format plugin has it's way -->
+            <!-- prettier-ignore -->
+            <img
             class="about-section__image"
-            src="./assets/woman-on-yoga-ball.png"
+            srcset="
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_200.png 200w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_328.png 328w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_429.png 429w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_517.png 517w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_596.png 596w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_664.png 664w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_728.png 728w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_793.png 793w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_857.png 857w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_915.png 915w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_969.png 969w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1027.png 1027w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1080.png 1080w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1133.png 1133w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1189.png 1189w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1239.png 1239w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1294.png 1294w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1344.png 1344w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1395.png 1395w,
+              ./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1400.png 1400w"
+            src="./assets/woman-on-yoga-ball/woman-on-yoga-ball_osqyrw_c_scale,w_1400.png"
             alt="Woman on yoga ball"
           />
+          </picture>
           <div class="about-section__badge">
             <svg
               width="140"
