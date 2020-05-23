@@ -510,4 +510,11 @@ hr {
 .footer__copywrite {
   display: inline-block;
   width: fit-content;
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 112.9%;
+  text-align: right;
+  letter-spacing: -0.045em;
+
+  color: #1f2029;
 }
