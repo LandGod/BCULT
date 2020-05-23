@@ -80,12 +80,13 @@ button {
 .logo-header {
   position: relative;
   font-weight: 900;
-  font-size: 36px;
+  font-size: 2.25em;
   letter-spacing: -0.025em;
   line-height: 104%;
   text-transform: uppercase;
   color: white;
-  margin-left: -50%;
+  transform-origin: center;
+  transform: translate(-4ch);
 }
 
 .join-button {
@@ -178,7 +179,7 @@ button {
 /* Note: Needs media query to avoid overlap */
 .you-here__arrow {
   position: absolute;
-  left: calc(50% - 25px);
+  left: calc(50% - (75px/2));
   bottom: 45%;
   width: 75px;
   height: 75px;
