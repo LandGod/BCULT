@@ -477,6 +477,23 @@ hr {
   margin: 0 1em;
 }
 
+/* Replace svg badges with hover versions on hover */
+#facebook-badge:hover {
+  content:url(./assets/social_icons/facebook-hover.svg);
+}
+
+#twitter-badge:hover {
+  content:url(./assets/social_icons/twitter-hover.svg);
+}
+
+#youtube-badge:hover {
+  content:url(./assets/social_icons/youtube-hover.svg);
+}
+
+#instagram-badge:hover {
+  content:url(./assets/social_icons/instagram-hover.svg);
+}
+
 /* Footer */
 
 .footer {
@@ -517,9 +534,18 @@ hr {
   margin-bottom: 1.5em;
 }
 
+.footer__email:hover {
+  color: #717280;
+  text-decoration: underline;
+}
+
 .upper-left-nav--footer {
   display: inline-block;
   color: #1f2029;
+}
+
+.upper-left-nav--footer .upper-left-nav__button:hover {
+  color: #717280;
 }
 
 .footer__copywrite {
