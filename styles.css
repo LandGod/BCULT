@@ -84,11 +84,39 @@ button {
 }
 
 .join-button {
+  display: inline-block;
   width: 200px;
-  height: 4.25em;
+  padding: 1.8em 0;
   color: #1f2029;
   border: 1px solid #1f2029;
   border-radius: 1px;
+
+  font-weight: bold;
+  font-size: 0.875em;
+  line-height: 112.9%;
+
+  text-align: center;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+
+  color: #1f2029;
+}
+
+.join-button--white {
+  position: relative;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 112.9%;
+
+  text-align: center;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  background-color: white;
+}
+
+.join-button--white svg{
+  position: absolute;
+  right: 1.25em;
 }
 
 /* Note, will need to move this on mobile */
