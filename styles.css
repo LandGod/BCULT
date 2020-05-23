@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap");
 
 /* Notes:
 
@@ -114,7 +114,7 @@ button {
   background-color: white;
 }
 
-.join-button--white svg{
+.join-button--white svg {
   position: absolute;
   right: 1.25em;
 }
@@ -342,4 +342,41 @@ hr {
   line-height: 150%;
   letter-spacing: -0.045em;
   color: #c6c9d4;
+}
+
+/* Call to Action Box */
+
+.call-to-action__box {
+  margin: 5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6em 0;
+  background: linear-gradient(
+    254.13deg,
+    #2fdfb5 0%,
+    #2fcddf 48.48%,
+    #3fa0fa 100%
+  );
+  color: #1f2029;
+}
+
+.call-to-action__headline {
+  font-weight: bold;
+  font-size: 3em;
+  line-height: 120%;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.call-to-action__text {
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: -0.045em;
+  width: 50%;
+  padding-bottom: 2em;
 }
