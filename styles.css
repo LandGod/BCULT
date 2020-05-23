@@ -462,3 +462,52 @@ hr {
 .follow__badge {
   margin: 0 1em;
 }
+
+/* Footer */
+
+.footer {
+  background-color: white;
+  width: 100%;
+  padding: 5em 3em 2em 3em;
+  color: #1f2029;
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footer__intro {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.045em;
+}
+
+.footer__email {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 120%;
+
+  text-align: center;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5em;
+}
+
+.upper-left-nav--footer {
+  display: inline-block;
+  color: #1f2029;
+}
+
+.footer__copywrite {
+  display: inline-block;
+  width: fit-content;
+}
