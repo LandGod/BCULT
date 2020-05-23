@@ -86,7 +86,7 @@ button {
   text-transform: uppercase;
   color: white;
   transform-origin: center;
-  transform: translate(-4ch);
+  transform: translate(-4.1ch);
 }
 
 .join-button {
