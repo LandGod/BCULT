@@ -216,20 +216,19 @@ button {
 /* Note: Needs media query to avoid overlap */
 .you-here__arrow {
   position: absolute;
-  left: calc(50% - (75px / 2));
-  bottom: 45%;
-  width: 75px;
-  height: 75px;
+  left: calc(50% - (5vw / 2));
+  top: 16vw;
+  width: 5vw;
+  height: 5vw;
   background-color: #1f2029;
   border-radius: 100%;
 }
 
 .you-here__arrow svg {
   transform-origin: center;
-  transform: scale(0.8);
+  transform: scale(0.25);
   position: absolute;
-  left: 38%;
-  top: 35%;
+  left: 0;
 }
 
 .you-here__image {
@@ -569,20 +568,16 @@ hr {
 /* Media Queries for responsiveness */
 
 @media (max-width: 1366px) {
-  .you-here__arrow {
-    bottom: 35%;
-  }
 
   .you-here__text {
+    width: 75%;
+    left: calc(50% - (75% / 2));
+    font-size: 3em;
     top: 5%;
   }
 }
 
 @media (max-width: 1175px) {
-  /* Main image */
-  .you-here__arrow {
-    bottom: 15%;
-  }
 
   .you-here__text {
     top: 5%;
@@ -660,6 +655,20 @@ hr {
   }
 }
 
+@media (max-width: 1024px) {
+
+  .you-here__text {
+    font-size: 3em;
+  }
+
+  /* .you-here__arrow {
+    transform-origin: center;
+    transform: scale(1.2);
+    top: 20vw;
+  } */
+
+}
+
 @media (max-width: 768px) {
   .section-heading {
     font-size: 2.5em;
@@ -718,13 +727,14 @@ hr {
 
   .you-here__text {
     left: 0;
-    font-size: 2em;
+    font-size: 3em;
     width: 100%;
   }
 
   .you-here__arrow {
     transform-origin: center;
-    transform: scale(0.75);
+    transform: scale(1.2);
+    top: 20vw;
   }
 
   /* About Section */
@@ -823,5 +833,13 @@ hr {
 
   .footer__email {
     font-size: 2em;
+  }
+}
+
+@media (max-width: 500px) {
+  .you-here__text {
+    left: 0;
+    font-size: 1.75em;
+    width: 100%;
   }
 }
