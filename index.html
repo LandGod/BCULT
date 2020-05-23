@@ -32,18 +32,18 @@
     </div>
 
     <!-- Begin main page content area. -->
-    <div class="main-content-area">
+    <main class="main-content-area">
       <!-- Begin top header -->
       <div class="header-container">
         <div>
-          <div class="upper-left-nav">
-            <a href="#" class="upper-left-nav__button">About</a>
-            <a href="#" class="upper-left-nav__button">Features</a>
-            <a href="#" class="upper-left-nav__button">Key Benefits</a>
-          </div>
+          <nav class="upper-left-nav">
+            <a href="#about" class="upper-left-nav__button">About</a>
+            <a href="#features" class="upper-left-nav__button">Features</a>
+            <a href="#key-benefits" class="upper-left-nav__button">Key Benefits</a>
+          </nav>
         </div>
         <div>
-          <div class="logo-header">BCULT</div>
+          <h1 class="logo-header">BCULT</h1>
         </div>
         <div>
           <a href="#" class="join-button gradient-background">Join</a>
@@ -53,7 +53,10 @@
       <!-- Begin main image section -->
       <div class="you-here__container">
         <div class="you-here__overlay">
-          <div class="you-here__text">Imagine <br/> yourself here..</div>
+          <h3 class="you-here__text">
+            Imagine <br />
+            yourself here..
+          </h3>
           <div class="you-here__arrow" id="scrollArrow">
             <svg
               width="17"
@@ -80,10 +83,10 @@
       </div>
       <!-- End Image Section -->
       <!-- Begin About Seciont -->
-      <div id="about-section" class="about-section">
-        <div class="about-section__heading">
+      <section id="about" class="about">
+        <h2 class="about-section__heading">
           You are the next fitness mogul.
-        </div>
+        </h2>
         <div class="about-section__columns-container">
           <div class="about-section__details">
             <p>
@@ -155,13 +158,13 @@
           <span class="about-section__closing-text--highlight">Bcult</span> is
           obsessed with helping you achieve this.
         </div>
-      </div>
+      </section>
       <!-- End About Section -->
       <hr />
       <!-- Begin Features Section -->
-      <div class="features__flex-container">
+      <section class="features__flex-container" id="features">
         <div class="features__column">
-          <div class="features__section-title">Features</div>
+          <h2 class="features__section-title">Features</h2>
         </div>
         <div class="features__column">
           <!-- Feature 1 -->
@@ -258,7 +261,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- End Features Section -->
       <!-- Begin Big Blue Call to Action Box -->
       <div class="call-to-action__box">
@@ -296,34 +299,36 @@
       </div>
       <!-- End Call to Action Box -->
       <!-- Key Benefits Section -->
-      <h2 class="key-benefits__heading">Key Benefits</h2>
-      <div class="key-benefits__column-container">
-        <div class="key-benefits__column">
-          <img
-            class="key-benfits__numeral"
-            src="./assets/1.svg"
-            alt="Number One"
-          />
-          <p class="key-benfits__text">
-            No more fighting for space in disorganized and unfocused feeds.
-            Bcult is ONLY user created fitness, health, and wellness programs.
-          </p>
+      <section id="key-benefits">
+        <h2 class="key-benefits__heading">Key Benefits</h2>
+        <div class="key-benefits__column-container">
+          <div class="key-benefits__column">
+            <img
+              class="key-benfits__numeral"
+              src="./assets/1.svg"
+              alt="Number One"
+            />
+            <p class="key-benfits__text">
+              No more fighting for space in disorganized and unfocused feeds.
+              Bcult is ONLY user created fitness, health, and wellness programs.
+            </p>
+          </div>
+          <div class="key-benefits__column">
+            <img
+              class="key-benfits__numeral"
+              src="./assets/2.svg"
+              alt="Number One"
+            />
+            <p class="key-benfits__text">
+              Your followers come here for one reason: You and your unique
+              fitness content
+            </p>
+          </div>
         </div>
-        <div class="key-benefits__column">
-          <img
-            class="key-benfits__numeral"
-            src="./assets/2.svg"
-            alt="Number One"
-          />
-          <p class="key-benfits__text">
-            Your followers come here for one reason: You and your unique fitness
-            content
-          </p>
-        </div>
-      </div>
+      </section>
       <!-- End Key Benefits Section -->
       <!-- Follow Us Section -->
-      <div class="follow__container">
+      <section class="follow__container" id="follow">
         <div class="follow__column">
           <h2 class="follow__heading">Follow us</h2>
           <p class="follow__text">
@@ -363,23 +368,23 @@
             </a>
           </div>
         </div>
-      </div>
+      </section>
       <!-- EndFollow Us Section -->
       <!-- Begin Footer -->
-      <div class="footer">
+      <footer class="footer">
         <div class="footer__intro">For questions or cooperation:</div>
         <div class="footer__email">Join@bcult.com</div>
 
         <div class="footer__row">
           <div class="upper-left-nav upper-left-nav--footer">
-            <a href="#" class="upper-left-nav__button">About</a>
-            <a href="#" class="upper-left-nav__button">Features</a>
-            <a href="#" class="upper-left-nav__button">Key Benefits</a>
+            <a href="#about" class="upper-left-nav__button">About</a>
+            <a href="#features" class="upper-left-nav__button">Features</a>
+            <a href="#key-benefits" class="upper-left-nav__button">Key Benefits</a>
           </div>
           <div class="footer__copywright">© 2020 BCULT</div>
         </div>
-      </div>
+      </footer>
       <!-- End Footer -->
-    </div>
+    </main>
   </body>
 </html>
