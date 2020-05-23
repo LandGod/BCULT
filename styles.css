@@ -709,4 +709,15 @@ hr {
     margin: 1em;
   }
 
+  /* Footer */
+
+  .footer__email {
+    font-size: 2em;
+  }
+
+  .footer__row {
+    align-items: center;
+  }
+
+
 }
