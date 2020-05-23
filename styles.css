@@ -170,7 +170,7 @@ button {
 .you-here__overlay {
   position: absolute;
   width: 100%;
-  height: 42.60vw;
+  height: 42.6vw;
   background: rgba(33, 34, 36, 0.45);
   z-index: 1;
 }
@@ -297,10 +297,6 @@ hr {
 
 .features__column {
   width: 50%;
-}
-
-.features__section-title {
-  
 }
 
 .features__box {
@@ -516,7 +512,6 @@ hr {
 /* Media Queries for responsiveness */
 
 @media (max-width: 1366px) {
-
   .you-here__arrow {
     bottom: 35%;
   }
@@ -524,11 +519,9 @@ hr {
   .you-here__text {
     top: 5%;
   }
-
 }
 
 @media (max-width: 1175px) {
-  
   /* Main image */
   .you-here__arrow {
     bottom: 15%;
@@ -608,11 +601,9 @@ hr {
   .footer__row {
     align-items: center;
   }
-
 }
 
 @media (max-width: 768px) {
-
   .section-heading {
     font-size: 2.5em;
   }
@@ -768,5 +759,4 @@ hr {
   .footer__email {
     font-size: 2em;
   }
-
 }
