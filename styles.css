@@ -600,6 +600,12 @@ hr {
     margin-bottom: 0.2em;
   }
 
+  /* Footer */
+
+  .footer__row {
+    align-items: center;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -659,7 +665,7 @@ hr {
   .features__image {
     transform-origin: center;
     transform: scale(0.5);
-    /* float: left; */
+    margin-top: -2em;
   }
 
   .features__heading {
@@ -714,10 +720,5 @@ hr {
   .footer__email {
     font-size: 2em;
   }
-
-  .footer__row {
-    align-items: center;
-  }
-
 
 }
