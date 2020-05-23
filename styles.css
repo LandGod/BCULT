@@ -210,3 +210,18 @@ button {
 .about-section__details p:first-of-type {
   margin-bottom: 1.5em;
 }
+
+.about-section__image-container {
+  position: relative;
+}
+
+.about-section__image {
+  width: 100%;
+  height: auto;
+}
+
+.about-section__badge {
+  position: absolute;
+  top: -70px;
+  left: 8%;
+}
