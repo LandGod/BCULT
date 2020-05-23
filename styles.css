@@ -57,6 +57,7 @@ button {
   font-weight: 600;
   font-size: 1.125em;
   letter-spacing: -0.045em;
+  color: white;
 }
 
 .upper-left-nav__button:first-child {
@@ -94,7 +95,9 @@ button {
 .social-sidebar {
   position: absolute;
   right: 5%;
-  top: calc(31ch + (4em * 3) + 30vh); /* elemnt character width, plus slash spacing, plus 30vh from top of page */
+  top: calc(
+    31ch + (4em * 3) + 30vh
+  ); /* elemnt character width, plus slash spacing, plus 30vh from top of page */
 
   color: #c6c9d5;
   font-size: 0.7em;
@@ -128,7 +131,7 @@ button {
 
 .you-here__text {
   position: absolute;
-  left: calc(50% - (54%/2)); /* center */
+  left: calc(50% - (54% / 2)); /* center */
   top: 15%;
   width: 54%;
   font-weight: bold;
@@ -146,7 +149,7 @@ button {
   bottom: 45%;
   width: 75px;
   height: 75px;
-  background-color: #1F2029;
+  background-color: #1f2029;
   border-radius: 100%;
 }
 
@@ -163,4 +166,47 @@ button {
   width: 110%;
   height: auto;
   left: -5%;
+}
+
+/* About Section */
+.about-section {
+  margin-top: 4em;
+}
+
+.about-section__heading {
+  margin: 0 auto;
+  max-width: 956px;
+  font-weight: bold;
+  font-size: 4.5em;
+  line-height: 104%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.about-section__columns-container {
+  margin: 3.5em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.about-section__details {
+  width: 40%;
+  margin-right: 10%;
+}
+
+.about-section__details p {
+  font-weight: 500;
+  font-size: 1.4em;
+  line-height: 130%;
+
+  letter-spacing: -0.045em;
+
+  color: #c6c9d4;
+}
+
+.about-section__details p:first-of-type {
+  margin-bottom: 1.5em;
 }
