@@ -88,6 +88,11 @@ button {
   margin: 0 2vw;
 }
 
+.upper-left-nav__button:hover {
+  color: #8a8b98;
+  text-decoration: underline;
+}
+
 .logo-header {
   position: absolute;
   top: 25%;
@@ -118,6 +123,22 @@ button {
   text-transform: uppercase;
 
   color: #1f2029;
+
+  background: linear-gradient(
+    256.62deg,
+    #2fdfd4 0%,
+    #2fcddf 47.86%,
+    #59afff 100%
+  );
+}
+
+.join-button:hover {
+  background: linear-gradient(
+    256.62deg,
+    #59afff 0%,
+    #2fcddf 47.86%,
+    #2fdfd4 100%
+  );
 }
 
 .join-button--white {
@@ -129,7 +150,11 @@ button {
   text-align: center;
   letter-spacing: -0.045em;
   text-transform: uppercase;
-  background-color: white;
+  background: white;
+}
+
+.join-button--white:hover {
+  background: #d5d6de;
 }
 
 .join-button--white svg {
