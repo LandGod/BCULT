@@ -48,6 +48,7 @@ button {
   position: static;
   max-width: 1600px;
   margin: 36px 10% 0 10%;
+  overflow: hidden;
 }
 
 .header-container {
@@ -91,6 +92,7 @@ button {
 
 .join-button {
   display: inline-block;
+  box-sizing: border-box;
   width: 200px;
   padding: 1.8em 0;
   color: #1f2029;
@@ -626,7 +628,13 @@ hr {
   }
 
   .main-content-area {
+    /* box-sizing: border-box; */
+    width: 100vw;
     margin: 0;
+  }
+
+  .you-here__container {
+    
   }
 
   .you-here__overlay {
