@@ -689,6 +689,24 @@ hr {
 
   /* Follow */
 
+  .follow__container {
+    box-sizing: border-box;
+    padding: 0.5em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .follow__heading {
+    align-self: center;
+  }
+
+  .follow__text {
+    padding: 0 0.5em;
+  }
+
+  .follow__badge:first-of-type {
+    margin: 1em;
+  }
 
 }
