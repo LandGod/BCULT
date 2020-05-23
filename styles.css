@@ -33,6 +33,11 @@ button {
   );
 }
 
+.vcenter {
+  justify-content: center;
+  align-items: center;
+}
+
 .outer-container {
   position: relative;
   width: 100%;
@@ -425,10 +430,13 @@ hr {
 .follow__container {
   display: flex;
   flex-direction: row;
+  margin-bottom: 4em;
 }
 
 .follow__column {
+  display: flex;
   box-sizing: border-box;
+  flex-direction: column;
   width: 50%;
   color: white;
 }
@@ -449,4 +457,8 @@ hr {
   letter-spacing: -0.045em;
   color: #c6c9d4;
   padding-right: 10%;
+}
+
+.follow__badge {
+  margin: 0 1em;
 }
