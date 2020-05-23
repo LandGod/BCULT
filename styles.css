@@ -243,7 +243,7 @@ button {
 }
 
 hr {
-  border: 1px solid #C6C9D4;
+  border: 1px solid #c6c9d4;
 }
 
 .features__flex-container {
@@ -258,11 +258,48 @@ hr {
 
 .features__section-title {
   font-weight: bold;
-font-size: 72px;
-line-height: 104%;
+  font-size: 72px;
+  line-height: 104%;
 
-letter-spacing: -0.02em;
-text-transform: uppercase;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 
-color: white;
+  color: white;
+}
+
+.features__box {
+  display: flex;
+  flex-direction: row;
+}
+
+.features__image {
+  position: relative;
+}
+
+.features__image-symbol {
+  position: absolute;
+  left: calc(62.5px - 24.5px);
+  top: calc(62.5px - 25.5px);
+}
+
+.features__text {
+  margin: 2.2em 0 0 2.2em;
+  flex-direction: column;
+}
+
+.features__heading {
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.features__description {
+  margin-top: 0.5em;
+  font-size: 1.125em;
+  line-height: 150%;
+  letter-spacing: -0.045em;
+  color: #c6c9d4;
 }
