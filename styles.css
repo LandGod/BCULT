@@ -646,6 +646,29 @@ hr {
     visibility: hidden;
   }
 
+  /* About Section */
+
+  .about-section__columns-container {
+    flex-wrap: wrap;
+  }
+
+  .about-section__details {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0 1em;
+  }
+
+  .about-section__badge {
+    transform-origin: center;
+    transform: scale(0.5);
+    left: 0;
+  }
+
+  .about-section__closing-text {
+    font-size: 2em;
+  }
 
   /* Features Section */
   .features__flex-container {
