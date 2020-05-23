@@ -74,7 +74,7 @@ button {
 }
 
 .upper-left-nav__button {
-  margin: 0 2em;
+  margin: 0 2vw;
 }
 
 .logo-header {
@@ -179,7 +179,7 @@ button {
 /* Note: Needs media query to avoid overlap */
 .you-here__arrow {
   position: absolute;
-  left: calc(50% - (75px/2));
+  left: calc(50% - (75px / 2));
   bottom: 45%;
   width: 75px;
   height: 75px;
@@ -518,4 +518,38 @@ hr {
   letter-spacing: -0.045em;
 
   color: #1f2029;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1346px) {
+  /* Lower arrow to avoid overlaying text on wrap */
+  .you-here__arrow {
+    bottom: 30%;
+  }
+}
+
+@media (max-width: 1175px) {
+  .upper-left-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 9ch;
+  }
+
+  .upper-left-nav__button {
+    margin: 0;
+  }
+
+  .logo-header {
+    position: relative;
+    font-weight: 900;
+    font-size: 2.25em;
+    letter-spacing: -0.025em;
+    line-height: 104%;
+    text-transform: uppercase;
+    color: white;
+    transform-origin: center;
+    transform: translate(-4.1ch);
+  }
+
 }
