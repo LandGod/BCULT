@@ -180,6 +180,10 @@ button {
   transform: rotate(90deg);
 }
 
+.social-sidebar a:hover, .social-sidebar a:focus {
+  text-decoration: underline;
+}
+
 .slash-spacer {
   margin: 0 2em;
 }
