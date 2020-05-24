@@ -473,6 +473,7 @@ hr {
 }
 
 .follow__badge {
+  display: inline-block; /* Child being position:aboslute breaks without this line in Firefox... sometimes. */
   position: relative;
   margin: 0 1em;
   width: 100px;
