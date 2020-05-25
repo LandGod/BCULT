@@ -31,10 +31,11 @@ function main() {
 
   let joinButtons = document.getElementsByClassName("join-button");
 
-  // Click event for join buttons
+  // Clicking on a join button opens the popup (if it's not the popup's join button)
   for (let button of joinButtons) {
-    // TODO: REMOVE THIS TEST DATA!!
-    button.addEventListener("click", () => {});
+    if (button.id !== "popup-close-button") {
+      button.addEventListener("click", openPopup);
+    }
   }
 
   // ---------------------------------------------
@@ -72,13 +73,20 @@ function main() {
   }
 
   // Open Popup
+  function openPopup(e) {
+    e.preventDefault();
+    popupContainer.className = "popup__background--open";
+    setListenersInPopup();
+  }
 
   // Close Popup
   function closePopup(e) {
     e.preventDefault();
-    if (e.target === popupContainer || e.target === popupCloseButton) {
+    if (e.target === popupContainer || e.currentTarget === popupCloseButton) {
       popupContainer.className = "popup__background--closed";
       removeListenersInPopup();
+    } else {
+      console.log (e.target)
     }
   }
 }
