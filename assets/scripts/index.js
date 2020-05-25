@@ -16,7 +16,6 @@ loadEmailSubroutine().then(main);
 
 // Everthing other than the script for loading STMP.js is inside of this main function
 function main() {
-
   // Email functionality
   function sendEmail(email, subject, body) {
     Email.send({
@@ -35,15 +34,51 @@ function main() {
   // Click event for join buttons
   for (let button of joinButtons) {
     // TODO: REMOVE THIS TEST DATA!!
-    button.addEventListener("click", () => {
-      sendEmail(
-        "tentativechaos@gmail.com",
-        "Test Email from BCULT",
-        "This is the test email from BCULT. Testing, testing, testing."
-      );
-    });
+    button.addEventListener("click", () => {});
   }
 
-  // Join info popup
+  // ---------------------------------------------
+  // Join Popup
+  // ---------------------------------------------
 
+  // Establish DOM Elements
+  let popupContainer = document.getElementById("popup-container");
+  let popupJoinButton = document.getElementById("popup-join-button");
+  let popupNameField = document.getElementById("name-input");
+  let popupEmailField = document.getElementById("email-input");
+  let popupCloseButton = document.getElementById("popup-close-button");
+
+  // Send Email
+  function setJoinButtonListener(e) {
+    e.preventDefault();
+    let name = "[name]";
+    let userEmail = "[eamil]";
+    sendEmail(
+      "tentativechaos@gmail.com",
+      "A new user wants information about Bcult!",
+      `Hi Ben! Someone new wants to join BCULT!\nName: ${name}\nE-mail: ${userEmail}`
+    );
+  }
+  // Setup and Teardown
+  function setListenersInPopup() {
+    popupJoinButton.addEventListener("click", setJoinButtonListener);
+    popupCloseButton.addEventListener("click", closePopup);
+    popupContainer.addEventListener("click", closePopup);
+  }
+
+  function removeListenersInPopup() {
+    popupJoinButton.removeEventListener("click", setJoinButtonListener);
+    popupCloseButton.removeEventListener("click", closePopup);
+  }
+
+  // Open Popup
+
+  // Close Popup
+  function closePopup(e) {
+    e.preventDefault();
+    if (e.target === popupContainer || e.target === popupCloseButton) {
+      popupContainer.className = "popup__background--closed";
+      removeListenersInPopup();
+    }
+  }
 }

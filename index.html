@@ -473,10 +473,10 @@
       </footer>
       <!-- End Footer -->
       <!-- Begin Popup -->
-      <div class="popup__background" id="popup__background">
+      <div class="popup__background--open" id="popup-container">
         <div class="popup">
           <div class="popup__close-container">
-            <button class="popup__close-button">
+            <button class="popup__close-button" id="popup-close-button">
               <img src="./assets/close.svg" alt="close" />
             </button>
           </div>
@@ -491,11 +491,11 @@
             type="text"
             placeholder="E-Mail"
             class="popup__form"
-            id="email"
+            id="email-input"
           />
-          <input type="text" placeholder="Name" class="popup__form" id="name" />
+          <input type="text" placeholder="Name" class="popup__form" id="name-input" />
           <div class="popup__join-row">
-            <button class="join-button">Join</button>
+            <button class="join-button" id="popup-join-button">Join</button>
           </div>
         </div>
       </div>
