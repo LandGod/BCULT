@@ -660,6 +660,10 @@ hr {
   color: white;
 }
 
+.popup__form--invalid {
+  outline: 2px dashed red;
+}
+
 .popup__form::placeholder:focus {
   content: none;
 }

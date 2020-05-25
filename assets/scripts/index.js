@@ -49,16 +49,56 @@ function main() {
   let popupEmailField = document.getElementById("email-input");
   let popupCloseButton = document.getElementById("popup-close-button");
 
+  // Helper Functions
+
+  function resetStyles() {
+    popupNameField.className = "popup__form";
+    popupEmailField.className = "popup__form";
+    popupNameField.placeholder = "Name";
+    popupEmailField.placeholder = "E-Mail";
+  }
+
+  function rejectName() {
+    popupNameField.className = "popup__form popup__form--invalid";
+    popupNameField.value = "";
+    popupNameField.placeholder = "Please enter a valid name";
+  }
+
+  function rejectEmail() {
+    popupEmailField.className = "popup__form popup__form--invalid";
+    popupEmailField.value = "";
+    popupEmailField.placeholder = "Please enter a valid E-Mail";
+  }
+
+  // Valid email address
+  const validEmail = /^([A-Z]|[a-z]|-|_|[0-9]|\.)*@([a-z]|[A-Z]|[0-9])([a-z]|[A-Z]|-|[0-9]){0,61}([a-z]|[A-Z]|[0-9])\.([a-z]|[A-Z]|[0-9])([a-z]|[A-Z]|-|[0-9]){0,61}([a-z]|[A-Z]|[0-9])\.?(([a-z]|[A-Z]|[0-9])([a-z]|[A-Z]|-|[0-9]){0,61}([a-z]|[A-Z]|[0-9]))?$/;
+
   // Send Email
   function setJoinButtonListener(e) {
     e.preventDefault();
-    let name = "[name]";
-    let userEmail = "[eamil]";
-    sendEmail(
-      "tentativechaos@gmail.com",
-      "A new user wants information about Bcult!",
-      `Hi Ben! Someone new wants to join BCULT!\nName: ${name}\nE-mail: ${userEmail}`
-    );
+    let name = popupNameField;
+    let userEmail = popupEmailField;
+
+    resetStyles();
+
+    if (!name.value) {
+      rejectName();
+    } else if (name.value.trim().length < 1) {
+      rejectName();
+    } else if (!userEmail.value) {
+      rejectEmail();
+    } else if (!userEmail.value.match(validEmail)) {
+      rejectEmail();
+    } else {
+      console.log(
+        "Email not sent because sending was disabled in the code due to still beinging in development"
+      );
+      // sendEmail(
+      //   "tentativechaos@gmail.com",
+      //   "A new user wants information about Bcult!",
+      //   `Hi Ben! Someone new wants to join BCULT!\nName: ${name}\nE-mail: ${userEmail}`
+      // );
+    }
   }
   // Setup and Teardown
   function setListenersInPopup() {
@@ -85,8 +125,6 @@ function main() {
     if (e.target === popupContainer || e.currentTarget === popupCloseButton) {
       popupContainer.className = "popup__background--closed";
       removeListenersInPopup();
-    } else {
-      console.log (e.target)
     }
   }
 }
