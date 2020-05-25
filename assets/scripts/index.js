@@ -16,6 +16,8 @@ loadEmailSubroutine().then(main);
 
 // Everthing other than the script for loading STMP.js is inside of this main function
 function main() {
+
+  // Email functionality
   function sendEmail(email, subject, body) {
     Email.send({
       Host: "smtp.gmail.com",
@@ -30,7 +32,7 @@ function main() {
 
   let joinButtons = document.getElementsByClassName("join-button");
 
-  // Click even for join buttons
+  // Click event for join buttons
   for (let button of joinButtons) {
     // TODO: REMOVE THIS TEST DATA!!
     button.addEventListener("click", () => {
@@ -41,4 +43,7 @@ function main() {
       );
     });
   }
+
+  // Join info popup
+
 }

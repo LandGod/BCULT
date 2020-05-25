@@ -26,7 +26,6 @@
     <title>BCULT</title>
 
     <script defer="true" src="./assets/scripts/index.js"></script>
-
   </head>
   <body>
     <!-- Absolute positioned social sidebar that sits vertically on the right side of the page -->
@@ -81,22 +80,24 @@
             yourself here..
           </h3>
           <div class="you-here__arrow" id="scrollArrow">
-            <svg
-              height="100%"
-              width="100%"
-              length="auto"
-              viewBox="0 0 17 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.85"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M8.50185 21L-3.50406e-07 12.9836L2.07617 11.026L7.04677 15.7128L7.04677 -4.4177e-05L9.98291 -4.43054e-05L9.98291 15.6848L14.9238 11.026L17 12.9836L10.5762 19.0406L10.578 19.0424L8.50185 21Z"
-                fill="white"
-              />
-            </svg>
+            <a href="#about">
+              <svg
+                height="100%"
+                width="100%"
+                length="auto"
+                viewBox="0 0 17 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.85"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8.50185 21L-3.50406e-07 12.9836L2.07617 11.026L7.04677 15.7128L7.04677 -4.4177e-05L9.98291 -4.43054e-05L9.98291 15.6848L14.9238 11.026L17 12.9836L10.5762 19.0406L10.578 19.0424L8.50185 21Z"
+                  fill="white"
+                />
+              </svg>
+            </a>
           </div>
         </div>
         <picture>
@@ -471,6 +472,34 @@
         </div>
       </footer>
       <!-- End Footer -->
+      <!-- Begin Popup -->
+      <div class="popup__background" id="popup__background">
+        <div class="popup">
+          <div class="popup__close-container">
+            <button class="popup__close-button">
+              <img src="./assets/close.svg" alt="close" />
+            </button>
+          </div>
+          <h2 class="popup__title">
+            Join <span class="popup__title--highlight">Bcult</span>
+          </h2>
+          <p class="popup__text">
+            Bcult is currently invitation only, enter your email and name below
+            for launch updates and to be considered for early membership.
+          </p>
+          <input
+            type="text"
+            placeholder="E-Mail"
+            class="popup__form"
+            id="email"
+          />
+          <input type="text" placeholder="Name" class="popup__form" id="name" />
+          <div class="popup__join-row">
+            <button class="join-button">Join</button>
+          </div>
+        </div>
+      </div>
+      <!-- End Popup -->
     </main>
   </body>
 </html>
