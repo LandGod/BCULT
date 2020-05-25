@@ -1,3 +1,5 @@
+// Loads STMP.js from local file.
+// Loading this way uses a promise to ensure that nothing else runs until that script is loaded
 function loadEmailSubroutine() {
   return new Promise((resolve, reject) => {
     let scriptTag = document.createElement("script");
@@ -12,6 +14,7 @@ function loadEmailSubroutine() {
 
 loadEmailSubroutine().then(main);
 
+// Everthing other than the script for loading STMP.js is inside of this main function
 function main() {
   function sendEmail(email, subject, body) {
     Email.send({
@@ -27,18 +30,12 @@ function main() {
 
   let joinButtons = document.getElementsByClassName("join-button");
 
-  // Just for testing
-  const testData = {
-    email: "tentativechaos@gmail.com",
-    subject: "Test Email from BCULT",
-    body: "This is the test email from BCULT. Testing, testing, testing.",
-  };
-
   // Click even for join buttons
   for (let button of joinButtons) {
+    // TODO: REMOVE THIS TEST DATA!!
     button.addEventListener("click", () => {
       sendEmail(
-        "tentativecahos@gmail.com",
+        "tentativechaos@gmail.com",
         "Test Email from BCULT",
         "This is the test email from BCULT. Testing, testing, testing."
       );
