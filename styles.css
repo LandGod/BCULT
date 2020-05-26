@@ -898,19 +898,19 @@ hr {
   }
 
   .join-button--white {
-    width: 150px;
+    width: 120px;
     padding: 2em;
   }
 
   .join-button--white svg {
     transform-origin: center;
     transform: scale(0.6);
-    right: 3.75em;
+    right: 2.75em;
   }
 
   .join-button__see-more {
     position: relative;
-    left: -1em;
+    left: -0.75em;
   }
 
   /* You here section */
@@ -999,8 +999,12 @@ hr {
 
   /* Call to action Box */
 
+  .call-to-action__box {
+    padding: 2em 1em;
+  }
+
   .call-to-action__headline {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .call-to-action__text {
@@ -1011,11 +1015,23 @@ hr {
   /* Key Benfits */
 
   .key-benefits__heading {
-    padding-left: 0.2em;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 1em;
   }
 
   .key-benefits__column {
-    padding: 1em;
+    padding: 2em;
+  }
+
+  .key-benfits__numeral {
+    transform-origin: center;
+    transform: scale(0.7) translate(-1em);
+  }
+
+  .key-benfits__text {
+    font-size: 1.3em;
+    margin-bottom: 2em;
   }
 
   /* Follow */
