@@ -169,7 +169,15 @@ button {
 
 .join-button--white svg {
   position: absolute;
-  right: 1.25em;
+  right: 20%;
+}
+
+#see-more-button-top {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform-origin: center;
+  transform: translate(-50%) scale(0.75);
 }
 
 /* Note, will need to move this on mobile */
@@ -236,12 +244,13 @@ button {
 /* Note: Needs media query to avoid overlap */
 .you-here__arrow {
   position: absolute;
-  left: calc(50% - (5vw / 2));
-  top: 16vw;
+  left: 50%;
+  bottom: 10%;
   width: 5vw;
   height: 5vw;
   background-color: #1f2029;
   border-radius: 100%;
+  transform: translate(-50%);
 }
 
 .you-here__arrow svg {
@@ -539,7 +548,7 @@ hr {
   width: 100%;
   text-align: center;
   font-weight: 500;
-  font-size: 1.125em;
+  font-size: 0.75em;
   line-height: 150%;
   text-align: center;
   letter-spacing: -0.045em;
@@ -550,7 +559,7 @@ hr {
   width: 100%;
   text-align: center;
   font-weight: 600;
-  font-size: 3em;
+  font-size: 1.75em;
   line-height: 120%;
 
   text-align: center;
@@ -567,6 +576,7 @@ hr {
 .upper-left-nav--footer {
   display: inline-block;
   color: #1f2029;
+  font-size: 0.75em;
 }
 
 .upper-left-nav--footer .upper-left-nav__button:hover,
@@ -578,7 +588,7 @@ hr {
   display: inline-block;
   width: fit-content;
   font-weight: 500;
-  font-size: 1.125em;
+  font-size: 0.75em;
   line-height: 112.9%;
   text-align: right;
   letter-spacing: -0.045em;
@@ -844,7 +854,7 @@ hr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 105%;
     max-width: none;
     top: 100%;
     left: 50%;
@@ -863,6 +873,14 @@ hr {
     top: 0;
     left: 0;
     margin-top: 2.5em;
+  }
+
+  #social-dropdown a {
+    font-size: 1em;
+  }
+
+  .slash-spacer {
+    margin: 0 0.5em;
   }
 
   #top-nav .upper-left-nav__button {
@@ -908,26 +926,43 @@ hr {
     left: -0.75em;
   }
 
+  #see-more-button-top {
+    top: 40%;
+    transform: translate(-50%) scale(1);
+    padding: 1.5em 0;
+  }
+
   /* You here section */
   .you-here__container {
     height: auto;
     padding-top: 1em;
   }
 
+  .you-here__image {
+    width: 300%;
+    left: -100%;
+  }
+
   .you-here__overlay {
-    height: 54vw;
+    height: 135vw;
   }
 
   .you-here__text {
     left: 0;
+    top: 20%;
     font-size: 3em;
     width: 100%;
   }
 
   .you-here__arrow {
     transform-origin: center;
-    transform: scale(1.2);
-    top: 20vw;
+    transform: translate(-50%) scale(3) ;
+    left: 50%;
+    bottom: 15%;
+  }
+
+  #see-more-button-top {
+    top: 50%;
   }
 
   /* About Section */
@@ -1103,11 +1138,11 @@ hr {
   }
 
 }
-
+/* 
 @media (max-width: 500px) {
   .you-here__text {
     left: 0;
     font-size: 1.75em;
     width: 100%;
   }
-}
+} */
