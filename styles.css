@@ -140,6 +140,10 @@ button {
   );
 }
 
+.join-button--solid {
+  background: #2FCDDF;
+}
+
 .join-button:hover,
 .join-button:focus {
   background: linear-gradient(
@@ -148,6 +152,11 @@ button {
     #2fcddf 47.86%,
     #2fdfd4 100%
   );
+}
+
+.join-button--solid:hover, 
+.join-button--solid:focus {
+  background: #3E949D;
 }
 
 .join-button--white {
@@ -962,7 +971,7 @@ hr {
   }
 
   #see-more-button-top {
-    top: 50%;
+    top: 53%;
   }
 
   /* About Section */
