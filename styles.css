@@ -704,6 +704,10 @@ hr {
   color: white;
 }
 
+.popup__form:focus {
+  border: 3px solid #2FCDDF
+}
+
 .popup__form--invalid {
   outline: 2px dashed red;
 }
