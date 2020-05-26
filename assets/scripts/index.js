@@ -228,6 +228,7 @@ function main() {
   let menuContainer = document.getElementById("top-nav");
 
   function toggleNav(event, close) {
+    if (window.innerWidth > 768) {return} // Only operate on mobile size
     let currentHeight = close || menuContainer.style.height;
     if (
       !currentHeight ||
