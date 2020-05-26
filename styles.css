@@ -730,6 +730,7 @@ hr {
 
   /* Features Section */
   .features__flex-container {
+    margin: 3em 0 0 0;
     flex-wrap: wrap;
   }
 
@@ -737,8 +738,9 @@ hr {
     width: 100%;
   }
 
-  .features__section-title {
-    margin-bottom: 1em;
+  #features .features__section-title {
+    margin: 0; /* Specificity needed for margin */
+    text-align: center;
   }
 
   /* Follow Section */
@@ -958,23 +960,31 @@ hr {
   }
 
   .features__box {
-    /* display: block; */
+    display: flex;
+    flex-direction: column;
     padding-right: 0.3em;
   }
 
   .features__image {
+    display: flex;
+    justify-content: center;
     transform-origin: center;
     transform: scale(0.5);
-    margin-top: -2em;
+  }
+
+  .features__image-symbol {
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .features__heading {
     font-size: 1.5em;
+    text-align: center;
   }
 
   .features__text {
-    margin-right: 0.2em;
-    margin-left: -1em;
+    text-align: left;
+    margin: 0;
   }
 
   /* Call to action Box */
