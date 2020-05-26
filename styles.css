@@ -856,7 +856,7 @@ hr {
     transform: translate(-50%);
     overflow: hidden;
     z-index: 3;
-    background: #1F2029;
+    background: #1f2029;
     height: 0;
     transition: height 0.5s ease-in-out;
   }
@@ -897,10 +897,20 @@ hr {
     padding: 1em;
   }
 
+  .join-button--white {
+    width: 150px;
+    padding: 2em;
+  }
+
   .join-button--white svg {
     transform-origin: center;
     transform: scale(0.6);
-    right: 0.75em;
+    right: 3.75em;
+  }
+
+  .join-button__see-more {
+    position: relative;
+    left: -1em;
   }
 
   /* You here section */
@@ -989,7 +999,12 @@ hr {
 
   /* Call to action Box */
 
+  .call-to-action__headline {
+    font-size: 2em;
+  }
+
   .call-to-action__text {
+    margin-top: 1em;
     width: 90%;
   }
 
