@@ -812,7 +812,7 @@ hr {
   }
 
   .main-content-area {
-    margin: 30px 5% 0 5%;
+    margin: 1em 5% 0 5%;
   }
 
   .header-container {
@@ -851,6 +851,7 @@ hr {
     overflow: hidden;
     z-index: 3;
     background: rgba(197, 77, 77, 0.5);
+    height: 0;
   }
 
   #top-nav .upper-left-nav__button {
@@ -889,6 +890,7 @@ hr {
   /* You here section */
   .you-here__container {
     height: auto;
+    padding-top: 1em;
   }
 
   .you-here__overlay {

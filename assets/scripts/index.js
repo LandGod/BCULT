@@ -1,7 +1,7 @@
 // EMAIL Setting:
 // WARNING!! EMAIL PASSWORD INTENTIONALLY LEFT BLANK IN DEVELOPMENT
 // You must replace the 'your password here' text below with actual password for email functionality to work
-const PASSWORD = "YOUR PASSWORD HERE"; 
+const PASSWORD = "YOUR PASSWORD HERE";
 
 const USERNAME = "bcultjoinerdaemon"; // Email account user name
 const EMAILHOST = "smtp.gmail.com"; // For gmail, this should always be smtp.gmail.com
@@ -142,7 +142,6 @@ function main() {
 
   // Setup and Teardown
   function setListenersInPopup() {
-
     let currentStatus = popupJoinButton.getAttribute("status");
     if (currentStatus === "join") {
       popupJoinButton.addEventListener("click", joinButtonClickFunction);
@@ -223,4 +222,20 @@ function main() {
       popupJoinButton.setAttribute("status", "exit");
     });
   }
+
+  // Expand functionality for mobile top nav menue
+  let menuExpandButton = document.getElementById("menu-expand-button");
+  let menuContainer = document.getElementById("top-nav");
+
+  function toggleNav() {
+    let currentHeight = menuContainer.style.height;
+    console.log(currentHeight);
+    if (!currentHeight || currentHeight === "0px" || currentHeight === '0') {
+      menuContainer.style.height = "160px";
+    } else {
+      menuContainer.style.height = "0";
+    }
+  }
+
+  menuExpandButton.addEventListener("click", toggleNav);
 }
