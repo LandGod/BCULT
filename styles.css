@@ -1052,6 +1052,29 @@ hr {
 
   /* Footer */
 
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em 0 0.5em 0;
+  }
+
+  .footer .upper-left-nav--footer {
+    display: inline-block;
+    height: auto;
+    z-index: 1;
+    margin-bottom: 2em;
+  }
+
+  .upper-left-nav--footer .upper-left-nav__button {
+    color: #1F2029;
+  } 
+
+  .footer__row {
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .footer__email {
     font-size: 2em;
   }
