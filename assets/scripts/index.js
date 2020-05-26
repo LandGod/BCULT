@@ -21,12 +21,20 @@ function main() {
     Email.send({
       Host: "smtp.gmail.com",
       Username: "bcultjoinerdaemon",
-      Password: "bcult5ever",
+      Password: ${{mailerpass}}, 
       To: email,
       From: "bcultjoinerdaemon@gmail.com",
       Subject: subject,
       Body: body,
-    }).then((message) => console.log(message));
+    })
+      .then((message) => {
+        if (message === "OK") {
+          joinSuccess();
+        } else {
+          joinFailed(message);
+        }
+      })
+      .catch((err) => joinFailed(err));
   }
 
   let joinButtons = document.getElementsByClassName("join-button");
@@ -98,32 +106,28 @@ function main() {
   // Validate Input and Send Email (if input is valid)
   function joinButtonClickFunction(e) {
     e.preventDefault();
-    let name = popupNameField;
-    let userEmail = popupEmailField;
+    let name = popupNameField.value;
+    let userEmail = popupEmailField.value;
 
     resetStyles();
 
-    if (!name.value) {
+    if (!name) {
       rejectName();
-    } else if (name.value.trim().length < 1) {
+    } else if (name.trim().length < 1) {
       rejectName();
-    } else if (!userEmail.value) {
+    } else if (!userEmail) {
       rejectEmail();
-    } else if (!userEmail.value.match(validEmail)) {
+    } else if (!userEmail.match(validEmail)) {
       rejectEmail();
     } else {
-      console.log(
-        "Email not sent because sending was disabled in the code due to still beinging in development"
-      );
       // Remove ability to send again:
       popupJoinButton.removeEventListener("click", joinButtonClickFunction);
       // Inform user of success
-      joinSuccess();
-      // sendEmail(
-      //   "tentativechaos@gmail.com",
-      //   "A new user wants information about Bcult!",
-      //   `Hi Ben! Someone new wants to join BCULT!\nName: ${name}\nE-mail: ${userEmail}`
-      // );
+      sendEmail(
+        "tentativechaos@gmail.com",
+        "A new user wants information about Bcult!",
+        `Hey Ben! Someone new wants to join BCULT! <br> <br> Name: ${name} <br> E-mail: ${userEmail}`
+      );
     }
   }
 
@@ -170,6 +174,34 @@ function main() {
     popupEmailField.remove();
     popupNameField.remove();
     popupJoinButton.innerHTML = `GO BACK ${svgBackArrow}`;
+
+    // Add close listener to what used to be the join button
+    popupJoinButton.addEventListener("click", closePopup);
+    // Using set timeout to avoid race condition where popup just closes as soon as join is pressed
+    setTimeout(() => {
+      popupJoinButton.setAttribute("status", "exit");
+    });
+  }
+
+  function joinFailed(err) {
+    // Change element look
+    let error;
+    if (typeof err === "object") {
+      error = err.message;
+    } else {
+      error = err;
+    }
+    popupTitle.innerHTML = `Oops, something went wrong!<br><span class='popup__title--error'>Error: <br> <span style="color:red;">"${error}"</span></span> <br> <span class="popup__title--error-contact"> Please contact Ben@bcult.com to get in touch.</span>`;
+    popupText.remove();
+    popupEmailField.remove();
+    popupNameField.remove();
+    popupJoinButton.innerHTML = `Close`;
+    // Add close listener to what used to be the join button
+    popupJoinButton.addEventListener("click", closePopup);
+    // Using set timeout to avoid race condition where popup just closes as soon as join is pressed
+    setTimeout(() => {
+      popupJoinButton.setAttribute("status", "exit");
+    });
 
     // Add close listener to what used to be the join button
     popupJoinButton.addEventListener("click", closePopup);

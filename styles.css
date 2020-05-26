@@ -632,6 +632,18 @@ hr {
   margin-bottom: 0.5em;
 }
 
+.popup__title--error {
+  font-size: 0.3em;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  line-height: 30%;
+}
+
+.popup__title--error-contact {
+  font-size: 0.6em;
+}
+
 .popup__title--highlight {
   color: #2fcddf;
 }
