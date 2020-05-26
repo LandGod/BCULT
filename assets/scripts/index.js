@@ -227,8 +227,8 @@ function main() {
   let menuExpandButton = document.getElementById("menu-expand-button");
   let menuContainer = document.getElementById("top-nav");
 
-  function toggleNav() {
-    let currentHeight = menuContainer.style.height;
+  function toggleNav(event, close) {
+    let currentHeight = close || menuContainer.style.height;
     if (
       !currentHeight ||
       currentHeight === "0px" ||
@@ -244,4 +244,14 @@ function main() {
   }
 
   menuExpandButton.addEventListener("click", toggleNav);
+  document.getElementById("body").addEventListener("click", (e) => {
+    // e.preventDefault();
+    if (
+      e.target !== menuExpandButton &&
+      e.target !== menuContainer &&
+      e.target !== menuExpandButton.children[0]
+    ) {
+      toggleNav(false, true);
+    }
+  });
 }
