@@ -181,6 +181,16 @@ button {
   right: 20%;
 }
 
+.join-button__see-more {
+  position: relative;
+  left: -1%;
+}
+
+.join-button svg {
+  position: relative;
+  left: 0;
+}
+
 #see-more-button-top {
   position: absolute;
   left: 50%;
@@ -932,11 +942,6 @@ hr {
     transform-origin: center;
     transform: scale(0.6);
     right: 2.75em;
-  }
-
-  .join-button__see-more {
-    position: relative;
-    left: -0.75em;
   }
 
   #see-more-button-top {
