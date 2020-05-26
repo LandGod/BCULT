@@ -235,7 +235,7 @@ function main() {
       currentHeight === "0" ||
       currentHeight === "0em"
     ) {
-      menuContainer.style.height = "10em";
+      menuContainer.style.height = "13em";
       menuExpandButton.setAttribute("aria-expanded", "true");
     } else {
       menuContainer.style.height = "0";
