@@ -70,10 +70,16 @@ button {
 }
 
 .upper-left-nav {
+  position: relative;
   font-weight: 600;
   font-size: 1.125em;
   letter-spacing: -0.045em;
   color: white;
+  z-index: 4;
+}
+
+.upper-left-nav__expand {
+  display: none;
 }
 
 .upper-left-nav__button:first-child {
@@ -86,6 +92,7 @@ button {
 
 .upper-left-nav__button {
   margin: 0 2vw;
+  z-index: 3;
 }
 
 .upper-left-nav__button:hover,
@@ -788,14 +795,16 @@ hr {
 }
 
 @media (max-width: 768px) {
+  .popup {
+    width: 80%;
+  }
+
   .section-heading {
     font-size: 2.5em;
   }
 
   .social-sidebar {
-    position: static;
-    transform: none;
-    margin: 1em 0;
+    display: none;
   }
 
   .slash-spacer {
@@ -803,21 +812,59 @@ hr {
   }
 
   .main-content-area {
-    width: 100%;
-    margin: 0;
+    margin: 30px 5% 0 5%;
   }
 
   .header-container {
-    padding: 0 3vw 0 3vw;
+    padding: 0;
   }
 
   .logo-header {
+    order: 1;
+    display: inline-block;
     position: relative;
-    transform: translate(-0.2ch);
+    top: initial;
+    left: initial;
+    font-size: 1.5em;
+  }
+
+  .upper-left-nav__expand {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+  }
+
+  #top-nav {
+    order: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+    height: 200px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    z-index: 3;
+    background: rgba(197, 77, 77, 0.5);
+  }
+
+  #top-nav .upper-left-nav__button {
+    text-align: center;
   }
 
   .upper-left-nav__button {
-    font-size: 0.7em;
+    font-weight: 600;
+    font-size: 0.875em;
+    line-height: 300%;
+    text-align: center;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+    color: #ffffff;
   }
 
   .upper-left-nav__button:nth-of-type(2) {
@@ -825,9 +872,12 @@ hr {
   }
 
   .join-button {
-    width: calc(200px * 0.4);
-    padding: calc(0.9em * 0.7) 0;
-    font-size: 0.75em;
+    order: 3;
+    width: 100px;
+    font-weight: bold;
+    font-size: 0.6em;
+    line-height: 112.9%;
+    padding: 1em;
   }
 
   .join-button--white svg {
