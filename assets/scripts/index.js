@@ -227,6 +227,8 @@ function main() {
   let menuExpandButton = document.getElementById("menu-expand-button");
   let menuContainer = document.getElementById("top-nav");
 
+  // Opens or closes the top nav menu on mobile by changing the height attribute
+  // Does nothing when not 768px or less viewport width
   function toggleNav(event, close) {
     if (window.innerWidth > 768) {return} // Only operate on mobile size
     let currentHeight = close || menuContainer.style.height;

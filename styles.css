@@ -623,6 +623,7 @@ hr {
   max-width: 666px;
   color: white;
   background: #1f2029;
+  max-height: 90vh;
 }
 
 .popup__close-container {
@@ -716,17 +717,11 @@ hr {
   }
 
   /* Header */
-  .upper-left-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: 9ch;
-  }
-
   .upper-left-nav__button {
-    display: block;
     width: 100%;
-    margin: 0;
-  }
+    font-size: 0.9em;
+    margin: 0.4em;
+  } 
 
   /* Features Section */
   .features__flex-container {
