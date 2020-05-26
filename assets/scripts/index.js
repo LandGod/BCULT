@@ -142,7 +142,11 @@ function main() {
 
   // Setup and Teardown
   function setListenersInPopup() {
-    popupJoinButton.addEventListener("click", joinButtonClickFunction);
+
+    let currentStatus = popupJoinButton.getAttribute("status");
+    if (currentStatus === "join") {
+      popupJoinButton.addEventListener("click", joinButtonClickFunction);
+    }
     popupCloseButton.addEventListener("click", closePopup);
     popupContainer.addEventListener("click", closePopup);
   }
