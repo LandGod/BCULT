@@ -1,3 +1,12 @@
+// EMAIL Setting:
+// WARNING!! EMAIL PASSWORD INTENTIONALLY LEFT BLANK IN DEVELOPMENT
+// You must replace the 'your password here' text below with actual password for email functionality to work
+const PASSWORD = "YOUR PASSWORD HERE"; 
+
+const USERNAME = "bcultjoinerdaemon"; // Email account user name
+const EMAILHOST = "smtp.gmail.com"; // For gmail, this should always be smtp.gmail.com
+const FROMEMAIL = "bcultjoinerdaemon@gmail.com"; // The full email address you're using to send emails
+
 // Loads STMP.js from local file.
 // Loading this way uses a promise to ensure that nothing else runs until that script is loaded
 function loadEmailSubroutine() {
@@ -19,11 +28,11 @@ function main() {
   // Email functionality
   function sendEmail(email, subject, body) {
     Email.send({
-      Host: "smtp.gmail.com",
-      Username: "bcultjoinerdaemon",
-      Password: ${{mailerpass}}, 
+      Host: EMAILHOST,
+      Username: USERNAME,
+      Password: PASSWORD,
       To: email,
-      From: "bcultjoinerdaemon@gmail.com",
+      From: FROMEMAIL,
       Subject: subject,
       Body: body,
     })
