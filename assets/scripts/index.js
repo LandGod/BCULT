@@ -133,7 +133,7 @@ function main() {
       popupJoinButton.removeEventListener("click", joinButtonClickFunction);
       // Inform user of success
       sendEmail(
-        "tentativechaos@gmail.com",
+        "ben@bcult.com",
         "A new user wants information about Bcult!",
         `Hey Ben! Someone new wants to join BCULT! <br> <br> Name: ${name} <br> E-mail: ${userEmail}`
       );
