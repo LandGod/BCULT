@@ -229,11 +229,17 @@ function main() {
 
   function toggleNav() {
     let currentHeight = menuContainer.style.height;
-    console.log(currentHeight);
-    if (!currentHeight || currentHeight === "0px" || currentHeight === '0') {
-      menuContainer.style.height = "160px";
+    if (
+      !currentHeight ||
+      currentHeight === "0px" ||
+      currentHeight === "0" ||
+      currentHeight === "0em"
+    ) {
+      menuContainer.style.height = "10em";
+      menuExpandButton.setAttribute("aria-expanded", "true");
     } else {
       menuContainer.style.height = "0";
+      menuExpandButton.setAttribute("aria-expanded", "false");
     }
   }
 
