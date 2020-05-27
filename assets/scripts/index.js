@@ -155,11 +155,13 @@ function main() {
     popupCloseButton.addEventListener("click", closePopup);
     popupContainer.addEventListener("click", closePopup);
     window.addEventListener("keydown", closePopupOnEsc);
+    document.getElementById("body").tabIndex = -1;
   }
 
   function removeListenersInPopup() {
     popupJoinButton.removeEventListener("click", joinButtonClickFunction);
     popupCloseButton.removeEventListener("click", closePopup);
+    window.removeEventListener("keydown", closePopupOnEsc);
   }
 
   // Open Popup
