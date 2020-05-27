@@ -236,11 +236,13 @@ function main() {
   // Expand functionality for mobile top nav menue
   let menuExpandButton = document.getElementById("menu-expand-button");
   let menuContainer = document.getElementById("top-nav");
+  let menuIsOpen = false;
 
   // Opens or closes the top nav menu on mobile by changing the height attribute
   // Does nothing when not 768px or less viewport width
   function toggleNav(event, close) {
     if (window.innerWidth > 768) {
+      menuIsOpen = false;
       return;
     } // Only operate on mobile size
     let currentHeight = close || menuContainer.style.height;
@@ -252,9 +254,13 @@ function main() {
     ) {
       menuContainer.style.height = "13em";
       menuExpandButton.setAttribute("aria-expanded", "true");
+      toggleTabIndex("0");
     } else {
       menuContainer.style.height = "0";
       menuExpandButton.setAttribute("aria-expanded", "false");
+      if (isMobile) {
+        toggleTabIndex("-1");
+      }
     }
   }
 
@@ -271,36 +277,33 @@ function main() {
   });
 
   // Track mobile breakpoint status
-  function menuSizeWatcher() {
-    let menuSize = menuContainer.style.height;
-    new MutationObserver((mutationList, observer) => {
-      let newMenuSize = menuContainer.style.height;
-      if (newMenuSize !== menuSize) {
-        if (
-          !currentHeight ||
-          currentHeight === "0px" ||
-          currentHeight === "0" ||
-          currentHeight === "0em"
-        ) {
-          menuContainer.setAttribute("aria-expanded", "false");
-        } else {
-          menuContainer.setAttribute("aria-expanded", "true");
-        }
-
-        menuSize = newMenuSize;
-      }
-    });
+  let wasMobile = window.innerWidth < 768;
+  let isMobile = window.innerWidth < 768;
+  if (isMobile) {
+    console.log("ismobilestart");
+    toggleTabIndex("-1");
   }
-
-  let wasMobile = window.innerWidth > 768;
-  let isMobile = window.innerWidth > 768;
   window.onresize = (e) => {
-    isMobile = window.innerWidth > 768;
+    console.log("resize");
+    isMobile = window.innerWidth < 768;
     if (wasMobile !== isMobile) {
       if (isMobile) {
-        menuSizeWatcher();
+        toggleTabIndex("-1");
+        wasMobile = true;
+      } else {
+        toggleTabIndex("0");
         wasMobile = isMobile;
       }
     }
   };
+
+  // Controll menue selectability based on menue expanded status
+  function toggleTabIndex(str) {
+    let allNavButtons = document.getElementsByClassName(
+      "no-select-on-collapse"
+    );
+    for (navButton of allNavButtons) {
+      navButton.tabIndex = str;
+    }
+  }
 }
