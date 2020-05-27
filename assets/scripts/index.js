@@ -46,7 +46,11 @@ function main() {
       .catch((err) => joinFailed(err));
   }
 
+  // Get array of all join buttons
   let joinButtons = document.getElementsByClassName("join-button");
+
+  // Intialize a reference point to return to when closing the join popup
+  // Changes when popup is opened, but we'll initialize to a safe fallback value
   let lastClickedJoinButton = joinButtons[0];
 
   // Clicking on a join button opens the popup (if it's not the popup's join button)
