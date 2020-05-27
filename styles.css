@@ -272,6 +272,10 @@ button {
   transform: translate(-50%);
 }
 
+.you-here__arrow:focus-within {
+  border: 3px solid white;
+}
+
 .you-here__arrow svg {
   transform-origin: center;
   transform: scale(0.25);
