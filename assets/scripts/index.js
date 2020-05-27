@@ -139,6 +139,12 @@ function main() {
       );
     }
   }
+  function closePopupOnEsc(event) {
+    if (event.key === "Escape") {
+      popupContainer.className = "popup__background--closed";
+      removeListenersInPopup();
+    }
+  }
 
   // Setup and Teardown
   function setListenersInPopup() {
@@ -148,6 +154,7 @@ function main() {
     }
     popupCloseButton.addEventListener("click", closePopup);
     popupContainer.addEventListener("click", closePopup);
+    window.addEventListener("keydown", closePopupOnEsc);
   }
 
   function removeListenersInPopup() {
@@ -160,6 +167,7 @@ function main() {
     e.preventDefault();
     popupContainer.className = "popup__background--open";
     setListenersInPopup();
+    popupEmailField.focus();
   }
 
   // Close Popup
@@ -230,7 +238,9 @@ function main() {
   // Opens or closes the top nav menu on mobile by changing the height attribute
   // Does nothing when not 768px or less viewport width
   function toggleNav(event, close) {
-    if (window.innerWidth > 768) {return} // Only operate on mobile size
+    if (window.innerWidth > 768) {
+      return;
+    } // Only operate on mobile size
     let currentHeight = close || menuContainer.style.height;
     if (
       !currentHeight ||
