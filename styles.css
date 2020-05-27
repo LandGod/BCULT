@@ -141,7 +141,7 @@ button {
 }
 
 .join-button--solid {
-  background: #2FCDDF;
+  background: #2fcddf;
 }
 
 .join-button:hover,
@@ -154,9 +154,9 @@ button {
   );
 }
 
-.join-button--solid:hover, 
+.join-button--solid:hover,
 .join-button--solid:focus {
-  background: #3E949D;
+  background: #3e949d;
 }
 
 .join-button--white {
@@ -719,7 +719,7 @@ hr {
 }
 
 .popup__form:focus {
-  border: 3px solid #2FCDDF
+  border: 3px solid #2fcddf;
 }
 
 .popup__form--invalid {
@@ -758,7 +758,7 @@ hr {
     width: 100%;
     font-size: 0.9em;
     margin: 0.4em;
-  } 
+  }
 
   /* Features Section */
   .features__flex-container {
@@ -893,6 +893,11 @@ hr {
     transition: height 0.5s ease-in-out;
   }
 
+  /* Expand Nav When tabbing in */
+  #top-nav:focus-within {
+    height: 13em !important;
+  }
+
   #social-dropdown {
     display: inline-block;
     position: relative;
@@ -978,7 +983,7 @@ hr {
 
   .you-here__arrow {
     transform-origin: center;
-    transform: translate(-50%) scale(3) ;
+    transform: translate(-50%) scale(3);
     left: 50%;
     bottom: 15%;
   }
@@ -1134,8 +1139,8 @@ hr {
   }
 
   .upper-left-nav--footer .upper-left-nav__button {
-    color: #1F2029;
-  } 
+    color: #1f2029;
+  }
 
   .footer__row {
     flex-direction: column;
@@ -1157,7 +1162,6 @@ hr {
   .popup__title {
     font-size: 2em;
   }
-
 }
 
 @media (max-width: 330px) {

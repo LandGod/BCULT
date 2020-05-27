@@ -269,4 +269,38 @@ function main() {
       toggleNav(false, true);
     }
   });
+
+  // Track mobile breakpoint status
+  function menuSizeWatcher() {
+    let menuSize = menuContainer.style.height;
+    new MutationObserver((mutationList, observer) => {
+      let newMenuSize = menuContainer.style.height;
+      if (newMenuSize !== menuSize) {
+        if (
+          !currentHeight ||
+          currentHeight === "0px" ||
+          currentHeight === "0" ||
+          currentHeight === "0em"
+        ) {
+          menuContainer.setAttribute("aria-expanded", "false");
+        } else {
+          menuContainer.setAttribute("aria-expanded", "true");
+        }
+
+        menuSize = newMenuSize;
+      }
+    });
+  }
+
+  let wasMobile = window.innerWidth > 768;
+  let isMobile = window.innerWidth > 768;
+  window.onresize = (e) => {
+    isMobile = window.innerWidth > 768;
+    if (wasMobile !== isMobile) {
+      if (isMobile) {
+        menuSizeWatcher();
+        wasMobile = isMobile;
+      }
+    }
+  };
 }
