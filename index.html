@@ -38,29 +38,40 @@
 
       gtag("config", "UA-167719770-1");
     </script>
-
     <script defer="true" src="./assets/scripts/index.js"></script>
   </head>
   <body id="body">
     <!-- Absolute positioned social sidebar that sits vertically on the right side of the page -->
-    <div class="social-sidebar">
-      <a href="https://www.facebook.com/bcultofficial/" rel="noopener noreferer"
+    <div class="social-sidebar" aria-hidden="true" tabindex="-1">
+      <a
+        href="https://www.facebook.com/bcultofficial/"
+        rel="noopener noreferer"
+        target="_blank"
+        tabindex="-1"
         >Facebook</a
       >
       <span class="slash-spacer">/</span>
-      <a href="https://twitter.com/bcult_official" rel="noopener noreferer"
+      <a
+        href="https://twitter.com/bcult_official"
+        rel="noopener noreferer"
+        target="_blank"
+        tabindex="-1"
         >Twitter</a
       >
       <span class="slash-spacer">/</span>
       <a
         href="https://www.youtube.com/channel/UC5DFkWMGf5ILJYVxTJqib8w"
         rel="noopener noreferer"
+        target="_blank"
+        tabindex="-1"
         >Youtube</a
       >
       <span class="slash-spacer">/</span>
       <a
         href="https://www.instagram.com/bcult_official/"
         rel="noopener noreferer"
+        target="_blank"
+        tabindex="-1"
         >Instagram</a
       >
     </div>
@@ -125,7 +136,10 @@
             Imagine <br aria-hidden="true" />
             yourself here..
           </h3>
-          <button class="join-button join-button--white" id="see-more-button-top">
+          <button
+            class="join-button join-button--white"
+            id="see-more-button-top"
+          >
             <span class="join-button__see-more">See More</span>
             <svg
               width="14"
@@ -149,7 +163,7 @@
             </svg>
           </button>
           <div class="you-here__arrow" id="scrollArrow">
-            <a href="#about">
+            <a href="#about" aria-label="Go to About Section">
               <svg
                 height="100%"
                 width="100%"
@@ -575,7 +589,11 @@
             id="name-input"
           />
           <div class="popup__join-row">
-            <button class="join-button join-button--solid" id="popup-join-button" status="join">
+            <button
+              class="join-button join-button--solid"
+              id="popup-join-button"
+              status="join"
+            >
               Join
             </button>
           </div>
