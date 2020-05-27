@@ -77,7 +77,7 @@
     </div>
 
     <!-- Begin main page content area. -->
-    <main class="main-content-area">
+    <main class="main-content-area" id="main">
       <!-- Begin top header -->
       <div class="header-container">
         <button
@@ -88,11 +88,23 @@
           <img src="./assets/menuclosed.svg" alt="activate menue" />
         </button>
         <nav class="upper-left-nav" id="top-nav">
-          <a tabindex="0" href="#about" class="upper-left-nav__button no-select-on-collapse">About</a>
-          <a tabindex="0" href="#features" class="upper-left-nav__button no-select-on-collapse"
+          <a
+            tabindex="0"
+            href="#about"
+            class="upper-left-nav__button no-select-on-collapse"
+            >About</a
+          >
+          <a
+            tabindex="0"
+            href="#features"
+            class="upper-left-nav__button no-select-on-collapse"
             >Features</a
           >
-          <a tabindex="0" href="#key-benefits" class="upper-left-nav__button no-select-on-collapse">
+          <a
+            tabindex="0"
+            href="#key-benefits"
+            class="upper-left-nav__button no-select-on-collapse"
+          >
             Key Benefits
           </a>
           <div class="social-sidebar" id="social-dropdown">
@@ -565,45 +577,45 @@
         </div>
       </footer>
       <!-- End Footer -->
-      <!-- Begin Popup -->
-      <div class="popup__background--closed" id="popup-container">
-        <div class="popup">
-          <div class="popup__close-container">
-            <button class="popup__close-button" id="popup-close-button">
-              <img src="./assets/close.svg" alt="close" />
-            </button>
-          </div>
-          <h2 class="popup__title" id="popup-title">
-            Join <span class="popup__title--highlight">Bcult</span>
-          </h2>
-          <p class="popup__text" id="popup-text">
-            Bcult is currently invitation only, enter your email and name below
-            for launch updates and to be considered for early membership.
-          </p>
-          <input
-            type="text"
-            placeholder="E-Mail"
-            class="popup__form"
-            id="email-input"
-          />
-          <input
-            type="text"
-            placeholder="Name"
-            class="popup__form"
-            id="name-input"
-          />
-          <div class="popup__join-row">
-            <button
-              class="join-button join-button--solid"
-              id="popup-join-button"
-              status="join"
-            >
-              Join
-            </button>
-          </div>
+    </main>
+    <!-- Begin Popup -->
+    <div class="popup__background--closed" id="popup-container">
+      <div class="popup">
+        <div class="popup__close-container">
+          <button class="popup__close-button" id="popup-close-button">
+            <img src="./assets/close.svg" alt="close" />
+          </button>
+        </div>
+        <h2 class="popup__title" id="popup-title">
+          Join <span class="popup__title--highlight">Bcult</span>
+        </h2>
+        <p class="popup__text" id="popup-text">
+          Bcult is currently invitation only, enter your email and name below
+          for launch updates and to be considered for early membership.
+        </p>
+        <input
+          type="text"
+          placeholder="E-Mail"
+          class="popup__form"
+          id="email-input"
+        />
+        <input
+          type="text"
+          placeholder="Name"
+          class="popup__form"
+          id="name-input"
+        />
+        <div class="popup__join-row">
+          <button
+            class="join-button join-button--solid"
+            id="popup-join-button"
+            status="join"
+          >
+            Join
+          </button>
         </div>
       </div>
-      <!-- End Popup -->
-    </main>
+    </div>
+    <!-- End Popup -->
   </body>
 </html>

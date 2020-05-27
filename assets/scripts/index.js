@@ -146,6 +146,23 @@ function main() {
     }
   }
 
+  function redirectTabClick(e) {
+    // If user tabs off of join, put them back a the top on the close button
+    if (e.target === popupJoinButton) {
+      if (e.keyCode == 9 && !e.shiftKey) {
+        e.preventDefault();
+        popupCloseButton.focus();
+      }
+    }
+    // If user shift+tabs off of close button, put them back a the bottom on the join button
+    else if (e.target === popupCloseButton) {
+      if (e.shiftKey && e.keyCode == 9) {
+        e.preventDefault();
+        popupJoinButton.focus();
+      }
+    }
+  }
+
   // Setup and Teardown
   function setListenersInPopup() {
     let currentStatus = popupJoinButton.getAttribute("status");
@@ -155,7 +172,10 @@ function main() {
     popupCloseButton.addEventListener("click", closePopup);
     popupContainer.addEventListener("click", closePopup);
     window.addEventListener("keydown", closePopupOnEsc);
-    document.getElementById("body").tabIndex = -1;
+
+    // Capture tab order
+    popupJoinButton.addEventListener("keydown", redirectTabClick);
+    popupCloseButton.addEventListener("keydown", redirectTabClick);
   }
 
   function removeListenersInPopup() {
