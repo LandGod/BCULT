@@ -1105,7 +1105,6 @@ hr {
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    flex-wrap: wrap;
   }
 
   .follow__inner-container .follow__badge {
@@ -1156,11 +1155,10 @@ hr {
   }
 
 }
-/* 
-@media (max-width: 500px) {
-  .you-here__text {
-    left: 0;
-    font-size: 1.75em;
-    width: 100%;
+
+@media (max-width: 330px) {
+  .follow__inner-container .follow__badge {
+    transform: scale(0.6);
+    margin: 0 -5%;
   }
-} */
+}
