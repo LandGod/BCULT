@@ -1162,6 +1162,15 @@ hr {
   .popup__title {
     font-size: 2em;
   }
+
+  #popup-join-button {
+    transform: none;
+    font-size: 1em;
+    width: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
 }
 
 @media (max-width: 330px) {
