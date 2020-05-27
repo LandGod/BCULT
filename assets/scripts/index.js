@@ -47,6 +47,7 @@ function main() {
   }
 
   let joinButtons = document.getElementsByClassName("join-button");
+  let lastClickedJoinButton = joinButtons[0];
 
   // Clicking on a join button opens the popup (if it's not the popup's join button)
   for (let button of joinButtons) {
@@ -189,21 +190,34 @@ function main() {
     e.preventDefault();
     popupContainer.className = "popup__background--open";
     setListenersInPopup();
-    popupEmailField.focus();
+
+    // Shift focus to input or close button depending on submit status
+    let currentStatus = popupJoinButton.getAttribute("status");
+    if (currentStatus === "join") {
+      popupEmailField.focus();
+    } else {
+      popupJoinButton.focus();
+    }
+
+    // Save source of event so we can return focus when done
+    lastClickedJoinButton = e.target;
+
   }
 
   // Close Popup
   function closePopup(e) {
     e.preventDefault();
-    if (e.target === popupContainer || e.currentTarget === popupCloseButton) {
+    // Only close if the button pressed was exit, the background, or join after join becomes close
+    let currentStatus = popupJoinButton.getAttribute("status");
+    if (
+      e.target === popupContainer ||
+      e.currentTarget === popupCloseButton ||
+      currentStatus === "exit"
+    ) {
       popupContainer.className = "popup__background--closed";
       removeListenersInPopup();
-    } else if (e.target === popupJoinButton) {
-      let currentStatus = popupJoinButton.getAttribute("status");
-      if (currentStatus === "exit") {
-        popupContainer.className = "popup__background--closed";
-        removeListenersInPopup();
-      }
+      // Return focus to top of page
+      lastClickedJoinButton.focus();
     }
   }
 
