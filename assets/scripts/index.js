@@ -300,11 +300,9 @@ function main() {
   let wasMobile = window.innerWidth < 768;
   let isMobile = window.innerWidth < 768;
   if (isMobile) {
-    console.log("ismobilestart");
     toggleTabIndex("-1");
   }
   window.onresize = (e) => {
-    console.log("resize");
     isMobile = window.innerWidth < 768;
     if (wasMobile !== isMobile) {
       if (isMobile) {
