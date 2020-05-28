@@ -711,8 +711,7 @@ hr {
   letter-spacing: -0.045em;
   opacity: 0.95;
   border: 3px solid rgb(59, 61, 74);
-  height: 3em;
-  padding-left: 2em;
+  padding: 1.5em 0 1.5em 2em;
   outline: none;
   background: none;
   margin: 0 2em 1em 2em;
@@ -837,6 +836,10 @@ hr {
 @media (max-width: 768px) {
   .popup {
     width: 80%;
+  }
+
+  .popup__form {
+    padding: 1em 0 1em 2em;
   }
 
   .section-heading {
