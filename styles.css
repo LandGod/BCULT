@@ -264,7 +264,7 @@ button {
 .you-here__arrow {
   position: absolute;
   left: 50%;
-  bottom: 10%;
+  top: 38%;
   width: 5vw;
   height: 5vw;
   background-color: #1f2029;
@@ -1177,9 +1177,24 @@ hr {
 
 }
 
+@media (max-width: 510px) {
+  .you-here__text {
+    top: 5%;
+  }
+}
+
 @media (max-width: 330px) {
   .follow__inner-container .follow__badge {
     transform: scale(0.6);
     margin: 0 -5%;
   }
+
+  .you-here__text {
+    top: 3%;
+  }
+
+  .you-here__arrow {
+    bottom: 5%;
+  }
+
 }
